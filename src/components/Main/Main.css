@@ -1,0 +1,36 @@
+.main-img{
+    width: 100%;
+    height: 800px;
+    background: url('../../assets/img.png');
+    background-size: cover;
+    position: relative;
+}
+
+.main-img--container{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    background-color: #4CA4F4;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.book-title{
+    width: max-content;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+.book-array{
+    width: 90%;
+    margin: 0 auto;
+}
+.book-author{
+    width: max-content;
+    margin: 0 auto;
+}
+.book-name{
+    width: max-content;
+    font-weight: bold;
+    margin: 0 auto;
+}
