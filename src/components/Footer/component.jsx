@@ -2,7 +2,7 @@ import './Footer.css'
 import fly from '../../assets/img_2.png'
 export const Footer = () => {
     return (
-        <div className="footer p-4">
+        <footer className="footer p-4">
             <div className="footer-inner d-flex">
                 <div className="d-flex flex-column justify-content-between footer-item footer-item-1 mr-5">
                     <div className="footer-shuffle">Shuffle.</div>
@@ -44,6 +44,6 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
