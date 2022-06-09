@@ -3,10 +3,10 @@ import {Icon} from '../Icon';
 import location from '../../assets/location.svg'
 import search from '../../assets/search.svg'
 export const Header = () => {
-    return <header className="p-4 header">
+    return <header className="header">
         <div className="header--inner d-flex justify-content-between align-items-center">
-            <div>
-                Ansar
+            <div style={{color: '#2898FF', fontSize: '30px', fontWeight: 'bold'}}>
+                Stara
             </div>
             <div className="search-bar d-flex p-2 align-items-center">
                 <Icon style={{cursor: 'pointer'}} src={search} borderRadiusFalse width="22px" height="25px"/>

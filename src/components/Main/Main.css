@@ -22,8 +22,15 @@
     font-weight: bold;
 }
 .book-array{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+}
+.book-array > div {
+    margin-right: 30px;
+}
+
+.book-array:last-child{
+    margin-right: 0 !important;
 }
 .book-author{
     width: max-content;

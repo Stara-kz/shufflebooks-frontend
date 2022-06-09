@@ -1,4 +1,12 @@
 .App{
-    width: 80%;
+    width: 1200px;
     margin: 0 auto;
+}
+.App:after{
+    content: "";
+    width: 100%;
+    border: 1px solid #ADADAD;
+    position: absolute;
+    top: 100px;
+    left: 0;
 }

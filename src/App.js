@@ -4,16 +4,19 @@ import {Main} from './components/Main'
 import {Footer} from "./components/Footer";
 import {Routes, Route} from "react-router-dom";
 import {Profile} from "./components/Profile";
+import {Allbooks} from "./components/Allbooks";
+
 function App() {
   return (
-    <div className="App">
-        <Header/>
-        <Routes>
-            <Route path='/' element={<Main/>}/>
-            <Route path='/profile' element={<Profile/>}/>
-        </Routes>
-        <Footer/>
-    </div>
+        <div className="App">
+            <Header/>
+            <Routes>
+                <Route path='/' element={<Main/>}/>
+                <Route path='/profile' element={<Profile/>}/>
+                <Route path='/all-books' element={<Allbooks/>} />
+            </Routes>
+            <Footer/>
+        </div>
   );
 }
 
