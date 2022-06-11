@@ -1,9 +1,12 @@
 import './Main.css';
 import books from '../../utils/books.js'
+import {Link} from "react-router-dom";
 export const Main = () => {
     return <>
         <div className="main-img">
-            <div className="main-img--container">Обменивайтесь и читайте книги бесплатно</div>
+            <Link to='/all-books' style={{textDecoration: 'none'}}>
+                <div className="main-img--container" style={{cursor: 'pointer'}}>Обменивайтесь и читайте книги бесплатно</div>
+            </Link>
         </div>
         <div className="mt-5">
             <div className="book-title mb-4">Книги</div>

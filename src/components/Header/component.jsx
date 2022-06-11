@@ -2,9 +2,31 @@ import './Header.css'
 import {Icon} from '../Icon';
 import location from '../../assets/location.svg'
 import {Link} from "react-router-dom";
+import {SignInUp} from "../SignInUp";
+import {useEffect, useRef, useState} from "react";
 
 export const Header = () => {
-    return <header className="header">
+    const [isOpen, setIsOpen] = useState(false);
+    const uref = useRef();
+
+    const closeModal = () => {
+        setIsOpen(false);
+    }
+    useEffect(() => {
+        const hide = (e) => {
+            if (e && e.target.id !== 'login-btn' && isOpen && uref.current && !uref.current?.contains(e.target)) {
+                setIsOpen(false);
+            }
+        }
+        if (isOpen) {
+            document.addEventListener('click', hide);
+        }
+        return () => {
+            document.removeEventListener('click', hide);
+        }
+    }, [isOpen])
+    return <>
+    <header className="header">
         <div className="header--inner d-flex align-items-center">
             <Link to={'/'} style={{textDecoration: 'none'}}>
                 <div style={{color: '#2898FF', fontSize: '30px', fontWeight: 'bold'}}>
@@ -24,10 +46,12 @@ export const Header = () => {
                     <Icon src={location} height="25px" width="25px" borderRadiusFalse/>
                     <div>Astana</div>
                 </span>
-                <button className="btn btn-primary" style={{backgroundColor: '#4CA4F4', border: '1px solid #4CA4F4'}}>
+                <button onClick={() => {setIsOpen(true)}} id="login-btn" className="btn btn-primary" style={{backgroundColor: '#4CA4F4', border: '1px solid #4CA4F4'}}>
                     Войти
                 </button>
             </div>
         </div>
     </header>
+        {isOpen && <SignInUp uref={uref} closeModal={closeModal}/>}
+        </>
 }

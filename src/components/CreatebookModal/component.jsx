@@ -6,7 +6,7 @@ export const CreatebookModal = ({uref}) => {
         setName(e.target.files[0].name);
         console.log(e.target.files);
     }
-    return <form  id="modal-container"className="modal-container" style={{padding: '50px 50px', backgroundColor: 'white', zIndex: '3'}}>
+    return <form  id="modal-container" className="modal-container" style={{padding: '50px 50px', backgroundColor: 'white', zIndex: '3'}}>
         <div ref={uref} style={{width: '560px', height: '600px', color: '#858585'}}>
             <div className="d-flex justify-content-between mb-2">
                 <div>Название</div>

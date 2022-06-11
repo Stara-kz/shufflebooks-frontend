@@ -18,7 +18,7 @@ function App() {
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/all-books' element={<Allbooks/>} />
                 <Route path='/book' element={<Book/>} />
-                <Route path='createbook' element={<CreateBook/>} />
+                <Route path='/createbook' element={<CreateBook/>} />
             </Routes>
             <Footer/>
             <hr style={{position: 'relative', bottom: '330px', height: '3px', width: '100vw', left: '-340px'}}/>
