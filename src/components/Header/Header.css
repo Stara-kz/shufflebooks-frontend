@@ -5,12 +5,6 @@
 .header--inner{
     height: 100%;
 }
-.search-bar{
-    background-color: #ECEEF1;
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-}
 .search-input{
     background-color: #ECEEF1;
     border: none;

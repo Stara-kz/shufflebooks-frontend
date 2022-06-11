@@ -1,0 +1,35 @@
+.existing-modal-container{
+    width: 550px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 1px solid #ADADAD;
+}
+.input-createbook{
+    padding: 3px 5px;
+    border: none;
+    outline: none;
+    background-color: #F5F8FA;
+}
+.existing-textarea-description{
+    width: 500px;
+    height: 96px;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: #F5F8FA;
+}
+.btn-create{
+    width: 160px;
+    height: 42px;
+    border: none;
+    outline: none;
+    background-color: #0984E3;
+    color: white;
+    border-radius: 5px;
+    margin: 25px auto 0;
+    display: block;
+}

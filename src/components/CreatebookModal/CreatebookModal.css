@@ -1,0 +1,41 @@
+.modal-container{
+    width: 700px;
+    height: 770px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #ADADAD;
+}
+.input-createbook{
+    padding: 3px 5px;
+    border: none;
+    outline: none;
+    background-color: #F5F8FA;
+}
+.input-year-pages{
+    border: none;
+    outline: none;
+    background-color: #F5F8FA;
+}
+.textarea-description{
+    width: 409px;
+    height: 96px;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: #F5F8FA;
+    margin-left: 20px;
+}
+.btn-create{
+   width: 160px;
+   height: 42px;
+   border: none;
+   outline: none;
+   background-color: #0984E3;
+   color: white;
+   border-radius: 5px;
+   margin: 25px auto 0;
+   display: block;
+}
