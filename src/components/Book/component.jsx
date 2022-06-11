@@ -2,14 +2,34 @@ import './Book.css';
 import logo from '../../assets/img_1.png'
 import otherHolders from "../../utils/otherHolder";
 import {CreateExistingBookModal} from "../CreateExistingBookModal";
+import {useEffect, useRef, useState} from "react";
 
 export const Book = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const uref = useRef();
+
+    const closeModal = () => {
+        setIsOpen(false);
+    }
+    useEffect(() => {
+        const hide = (e) => {
+            if (e && e.target.id !== 'offer-book' && isOpen && uref.current && !uref.current?.contains(e.target)) {
+                setIsOpen(false);
+            }
+        }
+        if (isOpen) {
+            document.addEventListener('click', hide);
+        }
+        return () => {
+            document.removeEventListener('click', hide);
+        }
+    }, [isOpen])
     return  <>
         <div className="book-outer mt-5">
             <div className="book-top d-flex">
                 <div style={{width: '265px', cursor: 'pointer'}}>
                     <img src={logo} height="390px" width="265px"/>
-                    <div className="text-center mt-3 d-flex align-items-center justify-content-center" style={{fontWeight: 'bold', height: '37px', width: '100%', border: '1px solid #00B894', borderRadius: '7px', color: '#00B894'}}>Предложите эту книгу</div>
+                    <div id="offer-book" onClick={() => {setIsOpen(true)}} className="text-center mt-3 d-flex align-items-center justify-content-center" style={{fontWeight: 'bold', height: '37px', width: '100%', border: '1px solid #00B894', borderRadius: '7px', color: '#00B894'}}>Предложите эту книгу</div>
                 </div>
                 <div style={{flexGrow: '1', marginLeft: '30px'}}>
                     <div style={{color: '#4CA4F4', fontSize: '35px'}}>Harry Potter</div>
@@ -56,6 +76,10 @@ export const Book = () => {
                 }
             </div>
         </div>
-        <CreateExistingBookModal/>
+        {isOpen
+            && <CreateExistingBookModal
+                closeModal={closeModal}
+                uref={uref}/>
+        }
     </>
 }
